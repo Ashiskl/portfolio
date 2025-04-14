@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Achievements</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Container Styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Header Styles */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .header h1::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background-color: #4acfee;
+      bottom: -10px;
+      left: 25%;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Achievements Grid */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* Achievement Card */
+    .achievement-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .card-content p {
+      color: #7f8c8d;
+      margin-bottom: 15px;
+    }
+
+    .card-icon {
+      background-color: #4acfee;
+      color: white;
+      font-size: 2rem;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .achievement-card {
+      animation: fadeIn 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .achievement-card:nth-child(1) { animation-delay: 0.1s; }
+    .achievement-card:nth-child(2) { animation-delay: 0.2s; }
+    .achievement-card:nth-child(3) { animation-delay: 0.3s; }
+    .achievement-card:nth-child(4) { animation-delay: 0.4s; }
+    .achievement-card:nth-child(5) { animation-delay: 0.5s; }
+    .achievement-card:nth-child(6) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Achievements</h1>
+      <p>My portfolio showcases my outstanding achievements, both academically and professionally. It features academic honors, successful projects, and notable contributions. Each entry highlights my commitment to excellence and my ability to overcome challenges. Explore my portfolio to witness the depth of my accomplishments and the value I can bring to future endeavors.</p>
+    </div>
+
+    <div class="achievements-grid">
+      <!-- Achievement 1 -->
+      <div class="achievement-card">
+        <div class="card-icon">🎓</div>
+        <div class="card-content">
+          <h2>Python 1</h2>
+          <p>I have successfully completed CISCO course and certification of "Python_Essentials_1"</p>
+        </div>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div class="achievement-card">
+        <div class="card-icon">🤖</div>
+        <div class="card-content">
+          <h2>Robotics</h2>
+          <p>Successfully completed robotics workshop</p>
+        </div>
+      </div>
+
+      <!-- Achievement 3 -->
+      <div class="achievement-card">
+        <div class="card-icon">🐍</div>
+        <div class="card-content">
+          <h2>Python 2</h2>
+          <p>I have successfully completed CISCO course and certification of "Python_Essentials_2"</p>
+        </div>
+      </div>
+
+      <!-- Achievement 4 -->
+      <div class="achievement-card">
+        <div class="card-icon">💼</div>
+        <div class="card-content">
+          <h2>Hackathon</h2>
+          <p>Participated in GDG (nirman3.0) Hackathon 2025</p>
+        </div>
+      </div>
+
+      <!-- Achievement 5 -->
+      <div class="achievement-card">
+        <div class="card-icon">📚</div>
+        <div class="card-content">
+          <h2>Language</h2>
+          <p>Completed C language course</p>
+        </div>
+      </div>
+
+      <!-- Achievement 6 -->
+      <div class="achievement-card">
+        <div class="card-icon">🏆</div>
+        <div class="card-content">
+          <h2>Leadership </h2>
+          <p>School House  captain in school and make my winner in inter sports competions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for additional interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.achievement-card');
+      
+      // Add click effect to cards
+      cards.forEach(card => {
+        card.addEventListener('click', function() {
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = 'scale(1)';
+          }, 200);
+        });
+      });
+      
+      // Animation observer for scroll effects
+      const observerOptions = {
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

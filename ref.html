@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials - My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .testimonials-header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .testimonials-header h1::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background-color: #4acfee;
+      bottom: -10px;
+      left: 25%;
+    }
+
+    .testimonials-header p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 30px;
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-content {
+      margin-bottom: 20px;
+      font-style: italic;
+      color: #555;
+      position: relative;
+    }
+
+    .testimonial-content::before {
+      content: '"';
+      font-size: 4rem;
+      color: #4acfee;
+      opacity: 0.2;
+      position: absolute;
+      top: -20px;
+      left: -15px;
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4acfee;
+    }
+
+    .author-info {
+      margin-left: 15px;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .author-title {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #eee;
+      margin: 25px 0;
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonials-header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .testimonial-card {
+      animation: fadeIn 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+    .testimonial-card:nth-child(2) { animation-delay: 0.3s; }
+    .testimonial-card:nth-child(3) { animation-delay: 0.5s; }
+  </style>
+</head>
+<body>
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h1>Testimonials</h1>
+      <p>Testimonials on my portfolio are a testament to my exceptional skills and work ethic. They reflect the satisfaction and trust that clients, colleagues, and mentors have in my abilities. These testimonials highlight my professionalism, creativity, and the positive impact I make in various projects. Reading these testimonials provides valuable insights into the quality of my work and the positive experiences others have had working with me.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <!--<div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>He has prepared various projects such as "Smart Parking" and also learned about coding of Arduino</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://via.placeholder.com/60" alt="Vikrant Patil" class="author-avatar">
+          <div class="author-info">
+            <div class="author-name">Vikrant Patil</div>
+            <div class="author-title">©DIOT Founder</div>
+          </div>
+        </div>
+      </div>-->
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>He is our Robotics Faculty gave us many Ideas for our project and put a lot of effort in my projects.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="testimonial-author">
+          <img src="https://i.postimg.cc/CKbH3WY2/Screenshot-2025-04-14-141215.png" alt="Vinayak Kulkarni" class="author-avatar">
+          <div class="author-info">
+            <div class="author-name">Vinayak Kulkarni</div>
+            <div class="author-title">Emerging Technology Faculty</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <!--<div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>He has completed various projects given by me and put a lot of effort in making those projects</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://via.placeholder.com/60" alt="Madhvi Nimkar" class="author-avatar">
+          <div class="author-info">
+            <div class="author-name">Madhvi Nimkar</div>
+            <div class="author-title">CS Faculty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <script>
+    // JavaScript for additional interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+      const testimonialCards = document.querySelectorAll('.testimonial-card');
+      
+      // Add click effect to cards
+      testimonialCards.forEach(card => {
+        card.addEventListener('click', function() {
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = 'scale(1)';
+          }, 200);
+        });
+      });
+      
+      // Animation observer for scroll effects
+      const observerOptions = {
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      testimonialCards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
